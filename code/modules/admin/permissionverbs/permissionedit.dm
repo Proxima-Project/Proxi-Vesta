@@ -11,6 +11,7 @@
 	var/output = {"<!DOCTYPE html>
 <html>
 <head>
+<meta charset='utf-8'>
 <title>Permissions Panel</title>
 <script type='text/javascript' src='search.js'></script>
 <link rel='stylesheet' type='text/css' href='panels.css'>

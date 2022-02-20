@@ -30,11 +30,11 @@
 
 	if(max_length)
 		//testing shows that just looking for > max_length alone will actually cut off the final character if message is precisely max_length, so >= instead
-		if(length(input) >= max_length)
+		if(length_char(input) >= max_length)
 			var/overflow = ((length(input)+1) - max_length)
 			to_chat(usr, "<span class='warning'>Your message is too long by [overflow] character\s.</span>")
 			return
-		input = copytext(input,1,max_length)
+		input = copytext_char(input,1,max_length)
 
 	if(extra)
 		input = replace_characters(input, list("\n"=" ","\t"=" "))
@@ -251,14 +251,14 @@
 /proc/trim_left(text)
 	for (var/i = 1 to length(text))
 		if (text2ascii(text, i) > 32)
-			return copytext(text, i)
+			return copytext_char(text, i)
 	return ""
 
 //Returns a string with reserved characters and spaces after the last letter removed
 /proc/trim_right(text)
 	for (var/i = length(text), i > 0, i--)
 		if (text2ascii(text, i) > 32)
-			return copytext(text, 1, i + 1)
+			return copytext_char(text, 1, i + 1)
 	return ""
 
 //Returns a string with reserved characters and spaces before the first word and after the last word removed.
@@ -267,7 +267,7 @@
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
-	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
+	return uppertext(copytext_char(t, 1, 2)) + copytext_char(t, 2)
 
 //This proc strips html properly, remove < > and all text between
 //for complete text sanitizing should be used sanitize()

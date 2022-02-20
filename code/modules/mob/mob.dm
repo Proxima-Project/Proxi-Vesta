@@ -471,7 +471,7 @@
 // If usr != src, or if usr == src but the Topic call was not resolved, this is called next.
 /mob/OnTopic(mob/user, href_list, datum/topic_state/state)
 	if(href_list["flavor_more"])
-		var/text = "<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY></HTML>"
+		var/text = "<HTML><HEAD><meta charset='utf-8'><TITLE>[name]</TITLE></HEAD><BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY></HTML>"
 		show_browser(user, text, "window=[name];size=500x200")
 		onclose(user, "[name]")
 		return TOPIC_HANDLED
@@ -588,11 +588,11 @@
 			else if(H.has_organ(BP_L_ARM) || H.has_organ(BP_R_ARM)) //If they only have one arm
 				grabtype = "arm"
 			else //If they have no arms
-				grabtype = "torso"	
+				grabtype = "torso"
 
 			visible_message(SPAN_WARNING("\The [src] leans down and grips \the [H]'s [grabtype]."), SPAN_NOTICE("You lean down and grip \the [H]'s [grabtype]."), exclude_mobs = list(H))
 			if(!H.stat)
-				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your [grabtype]."))	
+				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your [grabtype]."))
 
 		else //Otherwise we're probably just holding their arm to lead them somewhere
 			var/grabtype

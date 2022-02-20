@@ -10,6 +10,7 @@
 	dat = {"
 
 		<html><head>
+		<meta charset='utf-8'>
 		</head>
 
 		<body>
@@ -33,6 +34,7 @@
 	dat = {"
 
 		<html><head>
+		<meta charset='utf-8'>
 		</head>
 
 		<body>
@@ -55,6 +57,7 @@
 	dat = {"
 
 		<html><head>
+		<meta charset='utf-8'>
 		</head>
 
 		<body>

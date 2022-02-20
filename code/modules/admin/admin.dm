@@ -44,7 +44,7 @@ var/global/floorIsLava = 0
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	var/body = "<html><head><title>Options for [M.key]</title></head>"
+	var/body = "<html><head><meta charset='utf-8'><title>Options for [M.key]</title></head>"
 	body += "<body>Options panel for <b>[M]</b>"
 	var/last_ckey = LAST_CKEY(M)
 	if(M.client)
@@ -350,6 +350,7 @@ var/global/floorIsLava = 0
 	var/html = {"
 		<html>
 		<head>
+			<meta charset='utf-8'>
 			<title>Info on [key]</title>
 			<script src='player_info.js'></script>
 		</head>
@@ -1445,7 +1446,7 @@ var/global/floorIsLava = 0
 			data += "[item.name] - <a href='?_src_=holder;AdminFaxView=\ref[item]'>view message</a><br>"
 	else
 		data += "<center>No faxes yet.</center>"
-	show_browser(usr, "<HTML><HEAD><TITLE>Fax History</TITLE></HEAD><BODY>[data]</BODY></HTML>", "window=FaxHistory;size=450x400")
+	show_browser(usr, "<HTML><HEAD><meta charset='utf-8'><TITLE>Fax History</TITLE></HEAD><BODY>[data]</BODY></HTML>", "window=FaxHistory;size=450x400")
 
 datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies in
 

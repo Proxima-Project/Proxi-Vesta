@@ -6,6 +6,7 @@
 
 	dat = {"<html>
 				<head>
+				<meta charset='utf-8'>
 				<style>
 				h1 {font-size: 21px; margin: 15px 0px 5px;}
 				h2 {font-size: 18px; margin: 15px 0px 5px;}
@@ -102,6 +103,7 @@
 	..()
 	dat = {"<html>
 				<head>
+				<meta charset='utf-8'>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
 				h2 {font-size: 15px; margin: 15px 0px 5px;}
